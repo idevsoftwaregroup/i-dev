@@ -39,7 +39,7 @@ export default function Banner() {
     <Swiper spaceBetween={20} slidesPerView={2} loop={true}>
       {slides.map((item, index) => (
         <SwiperSlide key={index}>
-          <article className="card border borderInput round gray" dir={`${style.rightAlign}`}>
+          <article className="card border borderInput round gray" style={{border: '1px solid #dedede'}} dir={`${style.rightAlign}`}>
             <div className="center-align">
               <img src={item.image} />
             </div>

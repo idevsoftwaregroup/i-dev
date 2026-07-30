@@ -1,34 +1,42 @@
+import Articles from "../components/Articles";
 import Banner from "../components/Banner";
-
+import Categories from "../components/Categories";
 
 export default function Home() {
+  return (
+    <section>
+      <div className="field label border border-style round large grey3">
+        <input type="text" style={{
+            border: "1px solid #dedede"
+          }}/>
 
-    return (
+        <label>جستجو کن</label>
 
-        <section>
+        <i className="large">search</i>
+      </div>
 
-            <div className="field label border borderInput round large grey3">
+      <div className="large-space"></div>
 
-                <input type="text" />
+      <Banner />
 
-                <label>
-                    جستجو کن
-                </label>
+      <div className="large-space"></div>
 
-                <i className="large">
-                    search
-                </i>
+      <div className="right margin bottom3 bold large" dir="RTL">
+        <h6 className="right bold" >دسته بندی</h6>
+      </div>
 
-            </div>
+      <Categories />
 
+      <div className="large-space"></div>
 
-            <div className="large-space"></div>
+      <div className="right margin bottom3 bold large" dir="RTL">
+        <h6 className="right bold" >آخرین مقاله های دنیای فناوری</h6>
+      </div>
 
+      <Articles />
 
-            <Banner />
+      <div className="large-space"></div>
 
-
-        </section>
-
-    );
+    </section>
+  );
 }
