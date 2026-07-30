@@ -49,14 +49,10 @@ export default function Articles() {
     <div>
       {
         slides.map((item, index) => (
-          <article className="transparent padding" dir={style.rightAlign}>
-            <div className="grid no-space">
+          <article className="transparent padding border round" dir={style.rightAlign}>
+            <div className="no-space">
               <div className="s6">
                 <img className="responsive" src={item.image} />
-                <div key={index} className="absolute top left right padding top-shadow white-text">
-                  <h5>{item.title}</h5>
-                  {/*<p>{ item.text }</p>*/}
-                </div>
               </div>
               <div className="s6">
                 <div className="padding">
