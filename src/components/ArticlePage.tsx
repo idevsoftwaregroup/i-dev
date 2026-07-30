@@ -43,7 +43,7 @@ export default function ArticlePage({
             onClick={close}
           >
             <i className="large">
-            arrow_back_ios_new
+              chevron_right
             </i>
           </button>
 
