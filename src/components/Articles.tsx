@@ -41,7 +41,7 @@ export default function Articles() {
       icon: "cloud",
       image: "https://images.unsplash.com/photo-1451187580459-43490279c0fa",
       width: "150px",
-      backgroundColor: "indigo2"
+      backgroundColor: "pink2"
     },
   ];
 
