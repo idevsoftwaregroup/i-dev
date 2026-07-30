@@ -1,7 +1,13 @@
 
 import "swiper/css";
+import { useState } from "react";
+import ArticlePage from "./ArticlePage";
+
 
 export default function Articles() {
+  const [selectedArticle, setSelectedArticle] = useState<any>(null);
+  const [showArticle, setShowArticle] = useState(false);
+
   const slides = [
     {
       title: "آینده معماری نرم افزار",
@@ -9,7 +15,9 @@ export default function Articles() {
       icon: "architecture",
       image: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31",
       width: "150px",
-      backgroundColor: "orange1"
+      backgroundColor: "orange1",
+      content:
+      "معماری نرم افزار یکی از مهمترین بخش های توسعه سیستم های بزرگ است. استفاده از Microservices و Clean Architecture باعث افزایش انعطاف پذیری سیستم می شود."
     },
     {
       title: "مهندسی نرم افزار مدرن",
@@ -17,7 +25,9 @@ export default function Articles() {
       icon: "code",
       image: "https://images.unsplash.com/photo-1515879218367-8466d910aaa4",
       width: "150px",
-      backgroundColor: "lime1"
+      backgroundColor: "lime1",
+      content:
+      "معماری نرم افزار یکی از مهمترین بخش های توسعه سیستم های بزرگ است. استفاده از Microservices و Clean Architecture باعث افزایش انعطاف پذیری سیستم می شود."
     },
     {
       title: "امنیت در چرخه توسعه",
@@ -25,7 +35,9 @@ export default function Articles() {
       icon: "security",
       image: "https://images.unsplash.com/photo-1563013544-824ae1b704d3",
       width: "150px",
-      backgroundColor: 'blue1'
+      backgroundColor: 'blue1',
+      content:
+      "معماری نرم افزار یکی از مهمترین بخش های توسعه سیستم های بزرگ است. استفاده از Microservices و Clean Architecture باعث افزایش انعطاف پذیری سیستم می شود."
     },
     {
       title: "دنیای هوش مصنوعی",
@@ -33,7 +45,9 @@ export default function Articles() {
       icon: "psychology",
       image: "https://images.unsplash.com/photo-1677442136019-21780ecad995",
       width: "150px",
-      backgroundColor: "deep-purple1"
+      backgroundColor: "deep-purple1",
+      content:
+      "معماری نرم افزار یکی از مهمترین بخش های توسعه سیستم های بزرگ است. استفاده از Microservices و Clean Architecture باعث افزایش انعطاف پذیری سیستم می شود."
     },
     {
       title: "Cloud Native و DevOps",
@@ -41,7 +55,9 @@ export default function Articles() {
       icon: "cloud",
       image: "https://images.unsplash.com/photo-1451187580459-43490279c0fa",
       width: "150px",
-      backgroundColor: "pink2"
+      backgroundColor: "pink2",
+      content:
+      "معماری نرم افزار یکی از مهمترین بخش های توسعه سیستم های بزرگ است. استفاده از Microservices و Clean Architecture باعث افزایش انعطاف پذیری سیستم می شود."
     },
   ];
 
@@ -69,7 +85,15 @@ export default function Articles() {
                   <h5 className="small bold">{item.title}</h5>
                   <p>{ item.text }</p>
                   <nav>
-                    <button className="border round">مشاهده مقاله</button>
+                    <button
+                      className="border round"
+                      onClick={() => {
+                        setSelectedArticle(item);
+                        setShowArticle(true);
+                      }}
+                    >
+                      مشاهده مقاله
+                    </button>
                   </nav>
                 </div>
               </div>
@@ -77,6 +101,11 @@ export default function Articles() {
           </article>
         ))
       }
+      <ArticlePage
+        article={selectedArticle}
+        open={showArticle}
+        close={() => setShowArticle(false)}
+      />
   </div>
   );
 }

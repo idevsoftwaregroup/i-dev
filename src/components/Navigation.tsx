@@ -21,14 +21,14 @@ export default function Navigation() {
           {/* RIGHT SIDE */}
           <div className="row ">
             <button
-              className="circle left-round large transparent grey4"
+              className="circle  large transparent "
               onClick={() => setOpen(true)}
             >
               <i className="large ">apps</i>
             </button>
 
-            <button className="circle right-round transparent grey4 large">
-              <i className="large">account_circle</i>
+            <button className="circle  transparent  large">
+              <a href="tel:+989024276771"><i className="large">call</i></a>
             </button>
           </div>
 
@@ -109,13 +109,26 @@ export default function Navigation() {
 
 
           <li className="wave round" dir={ style.alignRTL } onClick={() => setOpen(false)}>
-            <NavLink to="/about">
+            <NavLink to="/callus">
               <i>call</i>
 
               <span>تماس با ما</span>
             </NavLink>
           </li>
 
+
+          <div className="space"></div>
+          <div className="space"></div>
+
+
+          <li className="fixed bottom right-align">
+            <div className="fixed bottom">
+              <h5 className="small right grey-text">گروه نرم افزاری آی دِو</h5>
+              <p className="right grey-text" dir="RTL">
+                0.0.1-β20263107 نسخه
+              </p>
+            </div>
+          </li>
 
         </ul>
       </dialog>
