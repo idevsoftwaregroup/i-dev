@@ -9,6 +9,7 @@ export default function Articles() {
       icon: "architecture",
       image: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31",
       width: "150px",
+      backgroundColor: "orange1"
     },
     {
       title: "مهندسی نرم افزار مدرن",
@@ -16,6 +17,7 @@ export default function Articles() {
       icon: "code",
       image: "https://images.unsplash.com/photo-1515879218367-8466d910aaa4",
       width: "150px",
+      backgroundColor: "lime1"
     },
     {
       title: "امنیت در چرخه توسعه",
@@ -23,6 +25,7 @@ export default function Articles() {
       icon: "security",
       image: "https://images.unsplash.com/photo-1563013544-824ae1b704d3",
       width: "150px",
+      backgroundColor: 'blue1'
     },
     {
       title: "دنیای هوش مصنوعی",
@@ -30,6 +33,7 @@ export default function Articles() {
       icon: "psychology",
       image: "https://images.unsplash.com/photo-1677442136019-21780ecad995",
       width: "150px",
+      backgroundColor: "deep-purple1"
     },
     {
       title: "Cloud Native و DevOps",
@@ -37,19 +41,21 @@ export default function Articles() {
       icon: "cloud",
       image: "https://images.unsplash.com/photo-1451187580459-43490279c0fa",
       width: "150px",
+      backgroundColor: "indigo2"
     },
   ];
 
   const style = {
-    rightAlign: 'RTL',
-    leftAlign: 'LTR'
-  }
+    rightAlign: 'rtl',
+    leftAlign: 'ltr',
+    article: 'transparent padding border round'
+  };
 
   return (
     <div>
       {
         slides.map((item, index) => (
-          <article className="transparent grey3 padding border round" dir={style.rightAlign}>
+          <article className={`${style.article} ${item.backgroundColor}`} dir={style.rightAlign}>
             <div className="grid no-space ">
               <div className="s3">
                 <img className="responsive small bottom round" src={item.image} />
