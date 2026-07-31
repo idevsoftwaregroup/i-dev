@@ -33,18 +33,15 @@ export default function ArticlePage({
 
         <header className="row">
 
-          <h4 className="max small">
+          {/*<h4 className="max small">
             {article?.title}
-          </h4>
+          </h4>*/}
 
 
-          <button
-            className="circle transparent"
-            onClick={close}
-          >
-            <i className="large">
-              chevron_right
-            </i>
+
+          <button className="extend circle red4" onClick={close}>
+            <i>arrow_back_ios_new</i>
+            <span>Button</span>
           </button>
 
         </header>
@@ -63,9 +60,9 @@ export default function ArticlePage({
 
         <div dir="rtl" className="padding">
 
-          {/*<h5>
+          <h5>
             {article?.title}
-          </h5>*/}
+          </h5>
 
 
           <p>
@@ -81,13 +78,15 @@ export default function ArticlePage({
 
 
 
-        <button
-          className="border round red4 white-text"
-          onClick={close}
-        >
-          <i>close</i>
-          بستن
-        </button>
+        <div className="right-align">
+          <button
+            className="right-align border round grey4 black-text"
+            onClick={close}
+          >
+            <i>close</i>
+            بستن
+          </button>
+        </div>
 
 
       </div>
