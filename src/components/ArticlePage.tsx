@@ -41,7 +41,7 @@ export default function ArticlePage({
 
           <button className="extend circle red4" onClick={close}>
             <i>arrow_back_ios_new</i>
-            <span>Button</span>
+            <span>بازگشت</span>
           </button>
 
         </header>
