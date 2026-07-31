@@ -39,7 +39,7 @@ export default function ArticlePage({
 
 
 
-          <button className="extend circle red4" onClick={close}>
+          <button className="extend circle red2 blur" onClick={close}>
             <i>arrow_back_ios_new</i>
             <span>بازگشت</span>
           </button>
@@ -51,7 +51,7 @@ export default function ArticlePage({
 
 
         <img
-          className="responsive round padding"
+          className="responsive round padding fixed top"
           src={article?.image}
           alt={article?.title}
         />
