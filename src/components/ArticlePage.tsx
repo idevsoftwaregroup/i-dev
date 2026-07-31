@@ -71,7 +71,7 @@ export default function ArticlePage({
 
 
           <p>
-            محتوای کامل مقاله اینجا نمایش داده می‌شود.
+            {article?.content}
           </p>
 
         </div>
