@@ -1,8 +1,7 @@
-
 import "swiper/css";
 import { useState } from "react";
 import ArticlePage from "./ArticlePage";
-
+import "../assets/css/style.css";
 
 export default function Articles() {
   const [selectedArticle, setSelectedArticle] = useState<any>(null);
@@ -38,9 +37,8 @@ export default function Articles() {
   یک معماری خوب فقط انتخاب تکنولوژی نیست؛ بلکه نتیجه تحلیل درست نیازمندی ها، شناخت Domain و رعایت اصول مهندسی نرم افزار است.
 
   در i-dev Software Group ما معماری نرم افزار را به عنوان پایه اصلی ساخت سیستم های قابل اعتماد، امن و مقیاس پذیر در نظر می گیریم.
-  `
+  `,
     },
-
 
     {
       title: "مهندسی نرم افزار مدرن",
@@ -94,9 +92,8 @@ export default function Articles() {
   استفاده از Design Pattern ها باعث می شود مشکلات رایج طراحی با راه حل های استاندارد حل شوند.
 
   مهندسی نرم افزار مدرن ترکیبی از دانش فنی، تجربه معماری و تفکر حل مسئله است.
-  `
+  `,
     },
-
 
     {
       title: "امنیت در چرخه توسعه",
@@ -135,9 +132,8 @@ export default function Articles() {
   امنیت واقعی زمانی ایجاد می شود که تیم های توسعه، عملیات و امنیت در کنار هم کار کنند.
 
   DevSecOps فرهنگ همکاری بین Development، Security و Operations است.
-  `
+  `,
     },
-
 
     {
       title: "دنیای هوش مصنوعی",
@@ -167,9 +163,8 @@ export default function Articles() {
   هوش مصنوعی جایگزین مهندس نرم افزار نیست؛ بلکه یک ابزار قدرتمند برای افزایش بهره وری مهندسان است.
 
   آینده توسعه نرم افزار ترکیبی از تجربه انسانی و قدرت هوش مصنوعی خواهد بود.
-  `
+  `,
     },
-
 
     {
       title: "Cloud Native و DevOps",
@@ -200,57 +195,56 @@ export default function Articles() {
   Pipeline های CI/CD امکان Build، Test و Deploy خودکار را فراهم می کنند.
 
   امروزه بسیاری از سازمان های بزرگ برای ساخت سیستم های Enterprise از Cloud Native Architecture استفاده می کنند.
-  `
-    }
+  `,
+    },
   ];
 
-
-
   const style = {
-    rightAlign: 'rtl',
-    leftAlign: 'ltr',
-    article: 'transparent padding border round'
+    rightAlign: "rtl",
+    leftAlign: "ltr",
+    article: "transparent padding border round",
   };
 
   return (
     <div>
-      {
-        slides.map((item, index) => (
-          <article className={`${style.article} ${item.backgroundColor}`} dir={style.rightAlign}>
-            <div className="grid no-space ">
-              <div className="s3">
-                <img className="responsive small bottom round" src={item.image} />
-                <div key={index} className="absolute top left right padding white-text">
-                  {/*<h5>{item.title}</h5>*/}
-                  {/*<p>{ item.text }</p>*/}
-                </div>
-              </div>
-              <div className="s9 no-space">
-                <div className="padding">
-                  <h5 className="small bold">{item.title}</h5>
-                  <p>{ item.text }</p>
-                  <nav>
-                    <button
-                      className="border round"
-                      onClick={() => {
-                        setSelectedArticle(item);
-                        setShowArticle(true);
-                      }}
-                    >
-                      مشاهده مقاله
-                    </button>
-                  </nav>
-                </div>
+      {slides.map((item, index) => (
+        <article className={`${style.article} backgroundColor`} dir={style.rightAlign}>
+          <div className="grid no-space ">
+            <div className="s3">
+              <img className="responsive small bottom round" src={item.image} />
+              <div
+                key={index}
+                className="absolute top left right padding white-text"
+              >
+                {/*<h5>{item.title}</h5>*/}
+                {/*<p>{ item.text }</p>*/}
               </div>
             </div>
-          </article>
-        ))
-      }
+            <div className="s9 no-space">
+              <div className="padding">
+                <h5 className="small bold">{item.title}</h5>
+                <p>{item.text}</p>
+                <nav>
+                  <button
+                    className="border round"
+                    onClick={() => {
+                      setSelectedArticle(item);
+                      setShowArticle(true);
+                    }}
+                  >
+                    مشاهده مقاله
+                  </button>
+                </nav>
+              </div>
+            </div>
+          </div>
+        </article>
+      ))}
       <ArticlePage
         article={selectedArticle}
         open={showArticle}
         close={() => setShowArticle(false)}
       />
-  </div>
+    </div>
   );
 }
