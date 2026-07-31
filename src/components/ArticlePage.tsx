@@ -51,7 +51,7 @@ export default function ArticlePage({
 
 
         <img
-          className="responsive round padding fixed top"
+          className="responsive round padding"
           src={article?.image}
           alt={article?.title}
         />
