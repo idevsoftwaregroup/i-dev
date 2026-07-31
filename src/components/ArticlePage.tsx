@@ -33,14 +33,14 @@ export default function ArticlePage({
 
         <header className="row">
 
-          {/*<h4 className="max small">
+          <h4 className="max small right-align">
             {article?.title}
-          </h4>*/}
+          </h4>
 
 
 
           <button className="extend circle red2 blur" onClick={close}>
-            <i>arrow_back_ios_new</i>
+            <i>arrow_forward</i>
             <span>بازگشت</span>
           </button>
 
