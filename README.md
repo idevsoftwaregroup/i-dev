@@ -239,7 +239,7 @@ Topics include:
 Website:
 
 ```
-https://i-dev.com
+https://idevgroup.vercel.app
 ```
 
 GitHub:
