@@ -60,9 +60,9 @@ export default function ArticlePage({
 
         <div dir="rtl" className="padding">
 
-          <h5>
+          {/*<h5>
             {article?.title}
-          </h5>
+          </h5>*/}
 
 
           <p>
